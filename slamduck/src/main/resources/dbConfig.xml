@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+    <comment>数据库相关配置</comment>
+
+    <!-- 综合数据库配置 -->
+    <entry key="jdbc.driverClassName">com.mysql.jdbc.Driver</entry>
+	<entry key="jdbc.username">root</entry>
+	<entry key="jdbc.password">19871129</entry>
+	<entry key="jdbc.url">jdbc:mysql://127.0.0.1:3306/FTD_DB?characterEncoding=utf8&amp;useUnicode=true&amp;emulateLocators=true&amp;zeroDateTimeBehavior=convertToNull</entry>
+	<entry key="jdbc.validationQuery">select 1 </entry>
+	
+    <!-- 连接池设置 -->
+    <entry key="jdbc.pool.initialSize">0</entry>
+    <entry key="jdbc.pool.maxTotal">50</entry>
+	<!--<entry key="jdbc.pagination.pageSize">20</entry>  设置分页组件的每页显示的记录数 -->
+
+</properties>

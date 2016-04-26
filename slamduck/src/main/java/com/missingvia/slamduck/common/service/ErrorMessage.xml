@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+    <comment>错误信息定义</comment>
+
+    <!-- 通用类-->
+    <entry key="mdmp.error.1400">参数不合法</entry>
+    <entry key="mdmp.error.1401">用户没有登录状态，可能是尚未登录，也可能是登录已失效。</entry>
+    <entry key="mdmp.error.1403">没有操作权限。</entry>
+    <entry key="mdmp.error.1404">找不到请求的数据。</entry>
+    <entry key="mdmp.error.1500">系统内部错误</entry>
+
+
+	<!-- 系统管理与通用类-->
+    <entry key="mdmp.error.3000">用户名{0}已存在，请选择别的用户名！</entry>
+    <entry key="mdmp.error.3002">角色名{0}已存在，请选择别的角色名！</entry>
+    <entry key="mdmp.error.3003">角色有关联的用户不允许删除！</entry>
+    <entry key="mdmp.error.3004">用户{0}不允许删除！</entry>
+    <entry key="mdmp.error.6011">用户名或密码错误！</entry>
+    <entry key="mdmp.error.6012">尚未登录或者登录信息过期！</entry>
+    <entry key="mdmp.error.6015">获取上传文件失败！</entry>
+    <entry key="mdmp.error.6081">当前已是最新版本。</entry>
+    <entry key="mdmp.error.6090">柜员编号 {0} 重复！</entry>
+    <entry key="mdmp.error.6091">业务类型编号 {0} 重复！</entry>
+    <entry key="mdmp.error.6092">网点 {0} 排队机压力指标重复添加！</entry>
+    <entry key="mdmp.error.6093">业务类型 {0} 正在使用无法删除！</entry>
+    
+    <!-- 媒体发布相关类-->
+    <entry key="mdmp.error.5010">模板名称 {0} 已存在！</entry>
+    <entry key="mdmp.error.5011">模板不存在，或已删除！</entry>
+    <entry key="mdmp.error.5020">未设置要发布的设备！</entry>
+
+
+</properties>

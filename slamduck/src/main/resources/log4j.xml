@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="default" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="c:/logs/FTDserver/FTDserver-web.html" />
+       
+        <param name="Append" value="true" />
+        <param name="MaxBackupIndex" value="10" />
+        <param name="MaxFileSize" value="500KB" />
+        <layout class="org.apache.log4j.HTMLLayout">
+            <param name="Title" value="FTD日志" />
+        </layout>
+    </appender>
+
+
+    <root>
+        <priority value="debug" />
+        <appender-ref ref="default" />
+    </root>
+
+</log4j:configuration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 示例程序：用户映射 -->
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.missingvia.slamduck.sys.user.dao.UserDao">
+	
+	<select id="findAll" resultType="com.missingvia.slamduck.sys.user.bean.UserInfo">
+		select id,username,password from sys_user
+	</select>
+</mapper>

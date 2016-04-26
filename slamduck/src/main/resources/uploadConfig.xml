@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>文件上传配置</comment>
+	
+	<!-- 在web.xml中配置的webAppRootKey -->
+	<entry key="upload.webAppRootKey">ftd.web.root</entry>
+	
+	<!-- 上传文件存储的根目录。
+	      如果不指定该值，则将采用虚拟目录的绝对路径作为根目录
+	       该值和upload.webAppRootKey必须指定一个。
+	-->
+	<entry key="upload.saveRoot"></entry>
+	
+	<!-- 上传时的临时文件夹 -->
+	<entry key="upload.temp">upload/temp</entry>
+	
+	<!-- ffmpeg程序路径名 -->
+	<entry key="upload.ffmpeg">commons/lib/ffmpeg.exe</entry>
+	
+	<!-- 视频默认上传路径 -->
+	<entry key="video.defaultPath">C:/file</entry>
+	
+	<!-- 视频默认未登录用户的预览时长，该参数只能配置成整数  -->
+	<entry key="video.previewLen">300</entry>
+	
+	<!--
+		文件上传的虚拟目录，如果不设置则视为当前项目的虚拟目录。
+		虚拟目录用来链接文档。另外， 如果未指定上传文件存储的根目录，则以虚拟目录的绝对路径将作为根目录。
+		如果指定了upload.root，则该配置无效。
+	-->
+	<entry key="upload.contextPath"></entry>
+	
+	<!-- ============= 视频上传 =============  -->
+	<entry key="upload.video.allowedExts">rmvb,3pg,avi,mkv,mp4,wav,wma</entry>
+	<entry key="upload.video.unallowedExts"></entry>
+	<entry key="upload.video.maxSize"></entry><!-- 允许的最大文件大小，单位为KB -->
+	<entry key="upload.video.relativePath">upload/video/{yyyy-MM}</entry>
+	
+	<!-- ============= 音频上传 =============  -->
+	<entry key="upload.audio.allowedExts">3gpp,mp3</entry>
+	<entry key="upload.audio.unallowedExts"></entry>
+	<entry key="upload.audio.maxSize"></entry><!-- 允许的最大文件大小，单位为KB -->
+	<entry key="upload.audio.relativePath">upload/audio/{yyyy-MM}</entry>
+	
+	<!-- ============= flash上传设置 =============  -->
+	<entry key="upload.flash.allowedExts">swf,flv</entry>
+	<entry key="upload.flash.unallowedExts"></entry>
+	<entry key="upload.flash.maxSize"></entry>
+	<entry key="upload.flash.relativePath">upload/flash/{yyyy-MM}</entry>
+	
+	<!-- ============= 图片上传设置 =============  -->
+	<entry key="upload.image.allowedExts">gif,jpg,jpeg,png,bmp,tiff,pcx</entry>
+	<entry key="upload.image.unallowedExts"></entry>
+	<entry key="upload.image.maxSize"></entry>
+	<entry key="upload.image.relativePath">upload/image/{yyyy-MM}</entry>
+	
+	
+	<!-- ============= app上传设置 =============  -->
+	<entry key="upload.app.allowedExts">apk,ipa</entry>
+	<entry key="upload.app.unallowedExts"></entry>
+	<entry key="upload.app.maxSize"></entry>
+	<entry key="upload.app.relativePath">upload/app/{yyyy-MM}</entry>
+
+</properties>

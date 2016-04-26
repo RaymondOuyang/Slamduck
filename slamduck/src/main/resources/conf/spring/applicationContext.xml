@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        default-lazy-init="true"
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context-4.0.xsd
+			http://www.springframework.org/schema/aop 
+			http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:appConfig"/>
+        <property name="defaultEncoding" value="utf-8"/>
+    </bean>
+
+	<!-- 导入配置文件 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:dbConfig.xml</value>
+                <value>classpath:appConfig.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+	<!-- 激活在bean中定义的各种注解，@Transactional注解除外，它需要tx:annotation-driven激活  -->
+	<context:annotation-config />
+
+	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入  -->
+	<context:component-scan base-package="com.missingvia.slamduck" />
+	
+	<!-- <bean id="pageConfig" class="com.ipowertec.framework.dao.pagination.PageConfig">
+		<property name="pageSize" value="${jdbc.pagination.pageSize}"/>
+	</bean> -->
+	
+	
+</beans>
